@@ -16,15 +16,21 @@ function HeroScreenPartners(props) {
         let listItems = profitsList.current.childNodes
 
         if (activeListItem) {
+            listItems[activeListItem].childNodes[3].style.display = 'none'
+            listItems[activeListItem].childNodes[2].style.display = 'initial'
             listItems[activeListItem].lastChild.style.height = '0'
             listItems[activeListItem].lastChild.style.paddingTop = '0'
         }
         if (event.target.tagName == 'LI') {
             if (event.target.dataset.id !== activeListItem) {
+                listItems[event.target.dataset.id].childNodes[3].style.display = 'initial'
+                listItems[event.target.dataset.id].childNodes[2].style.display = 'none'
                 listItems[event.target.dataset.id].lastChild.style.paddingTop = '10px'
                 listItems[event.target.dataset.id].lastChild.style.height = itemHeights.current[event.target.dataset.id] + 'px'
                 setActiveListItem(event.target.dataset.id)
             } else {
+                listItems[event.target.dataset.id].childNodes[3].style.display = 'none'
+                listItems[event.target.dataset.id].childNodes[2].style.display = 'initial'
                 listItems[event.target.dataset.id].lastChild.style.height = '0'
                 listItems[event.target.dataset.id].lastChild.style.paddingTop = '0'
                 setActiveListItem('')
@@ -32,10 +38,14 @@ function HeroScreenPartners(props) {
         }
         else if (event.target.tagName == 'svg' || event.target.tagName == 'SPAN') {
             if (event.target.parentElement.dataset.id !== activeListItem) {
+                listItems[event.target.parentElement.dataset.id].childNodes[3].style.display = 'initial'
+                listItems[event.target.parentElement.dataset.id].childNodes[2].style.display = 'none'
                 listItems[event.target.parentElement.dataset.id].lastChild.style.paddingTop = '10px'
                 listItems[event.target.parentElement.dataset.id].lastChild.style.height = itemHeights.current[event.target.parentElement.dataset.id] + 'px'
                 setActiveListItem(event.target.parentElement.dataset.id)
             } else {
+                listItems[event.target.parentElement.dataset.id].childNodes[3].style.display = 'none'
+                listItems[event.target.parentElement.dataset.id].childNodes[2].style.display = 'initial'
                 listItems[event.target.parentElement.dataset.id].lastChild.style.height = '0'
                 listItems[event.target.parentElement.dataset.id].lastChild.style.paddingTop = '0'
                 setActiveListItem('')
@@ -43,10 +53,14 @@ function HeroScreenPartners(props) {
         }
         else if (event.target.tagName == 'path') {
             if (event.target.parentElement.parentElement.dataset.id !== activeListItem) {
+                listItems[event.target.parentElement.parentElement.dataset.id].childNodes[3].style.display = 'initial'
+                listItems[event.target.parentElement.parentElement.dataset.id].childNodes[2].style.display = 'none'
                 listItems[event.target.parentElement.parentElement.dataset.id].lastChild.style.paddingTop = '10px'
                 listItems[event.target.parentElement.parentElement.dataset.id].lastChild.style.height = itemHeights.current[event.target.parentElement.parentElement.dataset.id] + 'px'
                 setActiveListItem(event.target.parentElement.parentElement.dataset.id)
             } else {
+                listItems[event.target.parentElement.parentElement.dataset.id].childNodes[3].style.display = 'none'
+                listItems[event.target.parentElement.parentElement.dataset.id].childNodes[2].style.display = 'initial'
                 listItems[event.target.parentElement.parentElement.dataset.id].lastChild.style.height = '0'
                 listItems[event.target.parentElement.parentElement.dataset.id].lastChild.style.paddingTop = '0'
                 setActiveListItem('')
@@ -119,6 +133,10 @@ function HeroScreenPartners(props) {
                                     <span>{item.text}</span>
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M11 7.30943V8.53774H5V7.30943H11ZM8.70341 5V11H7.30261V5H8.70341Z" fill="#393838" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2 0C0.895432 0 0 0.895416 0 2V14C0 15.1046 0.895432 16 2 16H14C15.1046 16 16 15.1046 16 14V2C16 0.895416 15.1046 0 14 0H2ZM2 1C1.44772 1 1 1.44772 1 2V14C1 14.5523 1.44772 15 2 15H14C14.5523 15 15 14.5523 15 14V2C15 1.44772 14.5523 1 14 1H2Z" fill="#393838" />
+                                    </svg>
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11 7.30943V8.53774H5V7.30943H11ZM8.70341 7.30943V8.53774H7.30261V7.30943H8.70341Z" fill="#393838" />
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M2 0C0.895432 0 0 0.895416 0 2V14C0 15.1046 0.895432 16 2 16H14C15.1046 16 16 15.1046 16 14V2C16 0.895416 15.1046 0 14 0H2ZM2 1C1.44772 1 1 1.44772 1 2V14C1 14.5523 1.44772 15 2 15H14C14.5523 15 15 14.5523 15 14V2C15 1.44772 14.5523 1 14 1H2Z" fill="#393838" />
                                     </svg>
                                     <p className="hero-screen__for-partners-info-innertext" >{item.inner_text}</p>

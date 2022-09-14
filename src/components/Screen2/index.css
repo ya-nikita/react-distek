@@ -313,6 +313,8 @@
   color: rgb(25, 122, 207);
   text-transform: uppercase;
   cursor: pointer;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 .screen-2__card-link span svg {
   height: 20px;
@@ -320,11 +322,23 @@
   margin: 0 0 0px 10px;
   vertical-align: bottom;
 }
+.screen-2__card-link span svg path {
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
 @media (max-width: 1200px) {
   .screen-2__card-link span svg {
     height: 16px;
     width: 16px;
   }
+}
+.screen-2__card-link span:hover {
+  color: rgb(57, 56, 56);
+}
+.screen-2__card-link span:hover svg path {
+  fill: rgb(57, 56, 56);
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 @media (max-width: 1200px) {
   .screen-2__card-link span {

@@ -269,6 +269,7 @@ $font__roboto-med-500: 'roboto-medium-500';
                 color: $color__blue-primary-light;
                 text-transform: uppercase;
                 cursor: pointer;
+                transition: 0.2s ease-in-out;
 
                 svg {
                     height: 20px;
@@ -276,9 +277,24 @@ $font__roboto-med-500: 'roboto-medium-500';
                     margin: 0 0 0px 10px;
                     vertical-align: bottom;
 
+                    path {
+                        transition: 0.2s ease-in-out;
+                    }
+
                     @media(max-width:1200px) {
                         height: 16px;
                         width: 16px;
+                    }
+                }
+
+                &:hover {
+                    color: $color__gray-scale-primary;
+
+                    svg {
+                        path {
+                            fill: $color__gray-scale-primary;
+                            transition: 0.2s ease-in-out;
+                        }
                     }
                 }
 

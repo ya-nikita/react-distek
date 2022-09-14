@@ -4,6 +4,7 @@ $color__gray-scale-primary: rgb(57, 56, 56);
 $color__gray-scale-secondary: rgb(106, 107, 116);
 $color__gray-scale-quaternary: rgb(189, 190, 193);
 $color__blue-primary-light: rgb(25, 122, 207);
+$color_blue-gradient: linear-gradient(254.71deg, #30B3ED 16.26%, #299EE2 35.91%, #258BD7 55.68%, #44A1E0 71.47%, #51A8E3 87.04%);
 
 $font__montserrat-semi-bold-600: 'montserrat-semi-bold-600';
 $font__roboto-reg-400: 'roboto-regular-400';
@@ -136,14 +137,39 @@ $font__roboto-med-500: 'roboto-medium-500';
                 padding: 0 10px 0 0;
 
                 span {
+                    transition: 0.2s ease-in-out;
+
                     @media(max-width:600px) {
                         display: none;
                     }
                 }
 
                 svg {
+
+                    g {
+                        path {
+                            transition: 0.2s ease-in-out;
+                        }
+                    }
+
                     @media(max-width:600px) {
                         height: 20px;
+                    }
+                }
+
+                &:hover {
+                    span {
+                        color: $color__blue-primary-light;
+                        transition: 0.2s ease-in-out;
+                    }
+
+                    svg {
+                        g {
+                            path {
+                                fill: $color__blue-primary-light;
+                                transition: 0.2s ease-in-out;
+                            }
+                        }
                     }
                 }
             }
@@ -160,7 +186,7 @@ $font__roboto-med-500: 'roboto-medium-500';
             margin: 0 0 14px 0;
 
             a {
-                color: $color__blue-primary-light !important;
+                color: $color__blue-primary-light  !important;
                 cursor: pointer;
             }
         }
@@ -293,6 +319,25 @@ $font__roboto-med-500: 'roboto-medium-500';
                 span {
                     color: $color__blue-primary-light;
                     font-size: 1em;
+                }
+            }
+
+            svg {
+                g {
+                    path {
+                        transition: 0.2s ease-in-out;
+                    }
+                }
+            }
+
+            &:hover {
+                svg {
+                    g {
+                        path {
+                            fill: $color__blue-primary-light;
+                            transition: 0.2s ease-in-out;
+                        }
+                    }
                 }
             }
 

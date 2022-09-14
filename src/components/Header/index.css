@@ -94,14 +94,22 @@ header {
           align-items: center;
   cursor: pointer;
 }
-.header__nav ul li::after {
-  content: "";
-  display: inline-block;
-  background: url(../../assets/images/Arrow.svg) no-repeat;
-  background-size: contain;
-  height: 20px;
-  width: 20px;
+.header__nav ul li a {
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+.header__nav ul li a svg {
   margin: 0 0 0 7px;
+}
+.header__nav ul li a svg path {
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+.header__nav ul li a:hover {
+  color: rgb(25, 122, 207) !important;
+}
+.header__nav ul li a:hover svg path {
+  fill: rgb(25, 122, 207);
 }
 @media (max-width: 1200px) {
   .header__nav {

@@ -138,14 +138,24 @@
     width: 42px;
   }
 }
-.hero-screen__links ul li::after {
-  content: "";
-  display: inline-block;
-  background: url(../../assets/images/hero-screen__arrow.svg) no-repeat;
-  background-size: contain;
-  height: 20px;
-  width: 20px;
-  margin: 0 0 0 10px;
+.hero-screen__links ul li a {
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+.hero-screen__links ul li a svg {
+  margin: 0 0 4px 10px;
+}
+.hero-screen__links ul li a svg path {
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+.hero-screen__links ul li a:hover {
+  color: rgb(57, 56, 56) !important;
+}
+.hero-screen__links ul li a:hover svg path {
+  fill: rgb(57, 56, 56);
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 .hero-screen__links ul li:last-child {
   margin: 0;

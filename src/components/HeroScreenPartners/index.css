@@ -218,6 +218,9 @@
   float: right;
   margin: 3px 12px 0 50px;
 }
+.hero-screen__for-partners-info-profits li svg:nth-of-type(2) {
+  display: none;
+}
 @media (max-width: 1439px) {
   .hero-screen__for-partners-info-profits li {
     -webkit-box-flex: 0;
