@@ -1,0 +1,202 @@
+$color__white: rgb(255, 255, 255);
+$color__gray-scale-primary: rgb(57, 56, 56);
+$color__blue-gradient: linear-gradient(50.48deg, rgb(48, 179, 237) -33.78%, rgb(41, 158, 226) 6.62%, rgb(36, 137, 214) 47.26%, rgb(66, 161, 224) 79.73%, rgb(80, 168, 226) 111.74%);
+$color__gray-scale-secondary: rgb(106, 107, 116);
+$color__gray-scale-quaternary: rgb(189, 190, 193);
+
+$font__montserrat-semi-bold-600: 'montserrat-semi-bold-600';
+$font__montserrat-bold-700: "montserrat-bold-700";
+$font__roboto-reg-400: 'roboto-regular-400';
+$font__roboto-med-500: 'roboto-medium-500';
+
+.screen-group426 {
+    background: $color__white;
+    border-radius: 20px;
+    margin: 0 0 50px 0;
+
+    &__wrapper {
+        min-height: 800px;
+        padding: 43px 40px 40px;
+        background: url(../../assets/images/screen_group426/map-half-8bit.png) no-repeat;
+        background-position: center;
+        border-radius: 20px;
+        background-size: 1100px;
+        background-position-y: calc(50% - 310px);
+        background-position-x: 767px;
+
+        @media(max-width:1439px) {
+            background-position-x: 580px;
+        }
+
+        @media(max-width:1199px) {
+            min-height: 1426px;
+            background-size: 1020px;
+            background-position-y: calc(50% - 195px);
+            background-position-x: 175px;
+        }
+
+        @media(max-width:991px) {
+            background-position-x: 30px;
+            padding: 20px 20px 30px;
+        }
+
+        @media(max-width:600px) {
+            padding: 14px 10px 25px;
+            min-height: 618px;
+            background: $color__white;
+            border-radius: 8px;
+        }
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        max-width: 560px;
+
+        @media(max-width:1200px) {
+            max-width: 100%;
+        }
+    }
+
+    &__cities {
+        flex: 1 0 auto;
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+
+            li {
+                flex: 0 0 50%;
+                margin: 0 0 6px 0;
+                padding: 0 0 0 36px;
+                font-family: $font__roboto-reg-400;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 1.125em;
+                line-height: 120%;
+                color: $color__gray-scale-primary;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    background: url(../../assets/images/screen_group426/list-marker.svg) no-repeat;
+                    position: absolute;
+                    left: 0;
+                    top: 1px;
+                    height: 16px;
+                    width: 16px;
+                    vertical-align: middle;
+                }
+
+                span {
+                    padding: 0 0 0 20px;
+                }
+
+                @media(max-width:600px) {
+                    font-size: 0.875em;
+                }
+            }
+        }
+
+        @media(max-width:1199px) {
+            max-width: 470px;
+        }
+    }
+
+    &__title {
+        margin: 0 0 60px 0;
+
+        h2 {
+            font-family: $font__montserrat-semi-bold-600;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 45px;
+            line-height: 106%;
+            color: $color__gray-scale-primary;
+
+            @media(max-width:991px) {
+                font-size: 2em;
+            }
+
+            @media(max-width:600px) {
+                font-size: 1.4375em;
+            }
+        }
+
+        @media(max-width:600px) {
+            margin: 0 0 40px 0;
+        }
+    }
+
+    &__contacts {
+        li {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            text-transform: lowercase;
+            border-top: 1px solid $color__gray-scale-quaternary;
+            padding: 7px 0 0 0;
+            margin-top: 20px;
+
+            small {
+                align-self: flex-start;
+                font-family: $font__montserrat-bold-700;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 0.5em;
+                line-height: 110%;
+                text-transform: uppercase;
+                color: $color__gray-scale-primary;
+                margin: 0 14px 0 0;
+            }
+        }
+
+        &-text {
+            flex: 1 1 auto;
+            font-family: $font__roboto-med-500;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.125em;
+            line-height: 110%;
+            font-variant: small-caps;
+            color: $color__gray-scale-primary;
+        }
+
+        &-subtext {
+            display: block;
+            font-family: $font__roboto-reg-400;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 0.83em;
+            line-height: 106%;
+            color: $color__gray-scale-secondary;
+            margin: 0 0 14px 0;
+        }
+
+        &-callback {
+            padding: 8px 24px;
+            margin: 0 0 0 27px;
+            white-space: nowrap;
+            font-family: $font__roboto-med-500;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 0.9375em;
+            line-height: 106%;
+            font-variant: small-caps;
+            color: $color__white;
+            background: $color__blue-gradient;
+            border: 0px;
+            border-radius: 6px;
+
+            @media(max-width:600px) {
+                margin: 0 0 20px 24px;
+            }
+        }
+    }
+}
+
+.right {
+    flex: 0 0 auto;
+    margin: 0 0 0 24px;
+}

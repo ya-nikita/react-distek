@@ -1,0 +1,94 @@
+/* <------1.СБРОС CSS(START)------> */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+/* <------1.СБРОС CSS(END)------> */
+
+body {
+    margin: 0;
+    background: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+
+/* <------2.ШРИФТЫ(START)------> */
+
+@font-face {
+    font-family: "roboto-regular-400";
+    src: url(./assets/fonts/Roboto-Regular.eot);
+    src: url(./assets/fonts/Roboto-Regular.woff);
+}
+
+@font-face {
+    font-family: "roboto-medium-500";
+    src: url(./assets/fonts/Roboto-Medium.eot);
+    src: url(./assets/fonts/Roboto-Medium.woff);
+}
+
+@font-face {
+    font-family: "montserrat-semi-bold-600";
+    src: url(./assets/fonts/Montserrat-SemiBold.eot);
+    src: url(./assets/fonts/Montserrat-SemiBold.woff);
+}
+
+@font-face {
+    font-family: "montserrat-bold-700";
+    src: url(./assets/fonts/Montserrat-Bold.eot);
+    src: url(./assets/fonts/Montserrat-Bold.woff);
+}
+
+// @font-face {
+//     font-family: "museo-sans-cyrl-700";
+//     src: url(./assets/fonts/Museo_Sans_Cyrl_700.eot);
+//     src: url(./assets/fonts/Museo_Sans_Cyrl_700.woff);
+// }
+
+/* <------2.ШРИФТЫ(END)------> */
+
+$color-background: rgba(241, 241, 241, 1);
+
+.app-container {
+    margin: 0 auto;
+    background: $color-background;
+}
+
+.container {
+    max-width: 1870px;
+
+    @media(max-width: 700px) {
+        padding: 0 10px;
+    }
+}
+
+.row {
+    margin: 0;
+}
+
+.col-12 {
+    padding: 0;
+}
